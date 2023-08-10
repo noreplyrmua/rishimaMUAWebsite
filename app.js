@@ -19,12 +19,10 @@ app.set('view engine', 'ejs');
 app.locals._ = _;
 
 var warningMessage = "";
-var noOfFields = 0;
-// mongodb+srv://noreplyrmua:<password>@cluster0.dlgrzgj.mongodb.net/?retryWrites=true&w=majority
-// mongodb+srv://" + process.env.ATLASUSERNAME + ":" + process.env.ATLASPSWD+ "@cluster0.dlgrzgj.mongodb.net/?retryWrites=true&w=majority/RMUA_DB
+var noOfFields = 0; 
 const connectDB = async () => {
     try {
-      const conn = await mongoose.connect("mongodb+srv://noreplyrmua:9780017475@cluster0.dlgrzgj.mongodb.net/RMUADB", {useNewUrlParser : true});
+      const conn = await mongoose.connect("mongodb+srv://" + process.env.ATLASUSERNAME + ":" + process.env.ATLASPSWD+ "@cluster0.dlgrzgj.mongodb.net/RMUA_DB", {useNewUrlParser : true});
       console.log(`MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
       console.log(error);
