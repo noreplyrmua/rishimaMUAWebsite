@@ -6,7 +6,6 @@ const ejs = require("ejs");
 const port = process.env.PORT || 9000;
 const app = express();
 const mongoose = require('mongoose');
-const _ = require('lodash');
 const fs = require('@cyclic.sh/s3fs');
 const { PDFDocument, StandardFonts, rgb } = require("pdf-lib");
 // const { writeFileSync, readFileSync } = require("fs");
