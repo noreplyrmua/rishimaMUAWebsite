@@ -1,3 +1,4 @@
+//=============================to make this version run locally, we need normal fs, not cyclic fs
 require('dotenv').config();
 const bodyParser = require("body-parser");
 const express = require("express");
@@ -6,11 +7,12 @@ const port = process.env.PORT || 9000;
 const app = express();
 const mongoose = require('mongoose');
 const _ = require('lodash');
-const fs = require('fs');
+const fs = require('@cyclic.sh/s3fs');
 const { PDFDocument, StandardFonts, rgb } = require("pdf-lib");
-const { writeFileSync, readFileSync } = require("fs");
+// const { writeFileSync, readFileSync } = require("fs");
 const moment = require('moment');
 const nodemailer = require('nodemailer');
+const aws = require('aws-sdk');
 
 
 app.use(bodyParser.urlencoded({extended : true}));
@@ -436,7 +438,7 @@ function istDate(){
     return ISTTime;
 }
 async function createPDF(invoice, name) {
-    const document = await PDFDocument.load(readFileSync("./invoice_layout.pdf"));
+    const document = await PDFDocument.load(fs.readFileSync("./invoice_layout.pdf"));
   
     const courierBoldFont = await document.embedFont(StandardFonts.Courier);
     const firstPage = document.getPage(0);
@@ -541,5 +543,5 @@ async function createPDF(invoice, name) {
   
   
   
-    writeFileSync(name + "_invoice.pdf", await document.save());
+    fs.writeFileSync(name + "_invoice.pdf", await document.save());
   }
