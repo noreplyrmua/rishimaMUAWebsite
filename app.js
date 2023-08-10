@@ -21,7 +21,8 @@ app.set('view engine', 'ejs');
 app.locals._ = _;
 
 var warningMessage = "";
-var noOfFields = 0; 
+var noOfFields = 0;
+var clientIDForInvoice = "" 
 const connectDB = async () => {
     try {
       const conn = await mongoose.connect("mongodb+srv://" + process.env.ATLASUSERNAME + ":" + process.env.ATLASPSWD+ "@cluster0.dlgrzgj.mongodb.net/RMUA_DB", {useNewUrlParser : true});
@@ -275,7 +276,7 @@ app.post("/showAll", function(req, res){
 
 app.post("/generateInvoice", function(req, res){
     noOfFields = req.body.noOfFields;
-    globalThis.clientIDForInvoice = req.body.clientIDForInvoice;
+    clientIDForInvoice = req.body.clientIDForInvoice;
     console.log(clientIDForInvoice);
     Enquiry.find({_id : req.body.clientIDForInvoice}).then(foundItem => {
         // console.log(foundItem.fullName);
