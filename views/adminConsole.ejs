@@ -1,0 +1,103 @@
+<%- include("header") %>
+<h1>Admin Console</h1>
+</div>
+    <table class="table-centering-div">
+        <tr>
+            <td><form action="/showAll" method="post"><button onclick="this.form.submit()" class="submitButton filter-db-button">Show All</button></form></td>
+            <td><form action="/showCompleted" method="post"><button onclick="this.form.submit()" class="submitButton filter-db-button">Show Completed</button></form></td>
+            <td><form action="/showIncomplete" method="post"><button onclick="this.form.submit()" class="submitButton filter-db-button">Show Incomplete</button></form></td>
+        </tr>
+    </table>
+<!-- </form> -->
+<div class="table-centering-div">
+    <table>
+        <tr class="heading-row">
+            <td class="table-cell table-heading">Name</td>
+            <td class="table-cell table-heading">Number</td>
+            <td class="table-cell table-heading">Instagram ID</td>
+            <td class="table-cell table-heading">Email</td>
+            <td class="table-cell table-heading">location Type</td>
+            <td class="table-cell table-heading">Booking Date</td>
+            <td class="table-cell table-heading"></td>
+            <td class="table-cell table-heading"></td>
+        </tr>
+        <% for (i = clients.length - 1; i >= 0; i--) {%>
+            <tr class="db-table-row" id="<%= clients[i]._id %>">
+                <td class="table-cell table-cell-data"><%= clients[i].fullName %></td> 
+                <td class="table-cell table-cell-data"><%= clients[i].waNumber %></td>
+                <td class="table-cell table-cell-data"><%= clients[i].instaID %></td>
+                <td class="table-cell table-cell-data"><%= clients[i].email %></td>
+                <td class="table-cell table-cell-data"><%= clients[i].locationType %></td>
+                <td class="table-cell table-cell-data"><%= clients[i].bookingDate.toLocaleDateString("en-IN", {weekday: "long", year: "numeric", month: "short", day: "numeric"}) %></td>
+                <td class="table-cell table-cell-data"><form action="/deleteEntry" method="POST" class="delete-entry-button-form"><input type="hidden" name="deleteObjectID" id="" value="<%= clients[i]._id %>"><button type="submit" class="delete-db-button"><i class="fa-solid fa-trash"></i></button></form></td>
+                <td class="table-cell table-cell-data"><button class="expandX delete-db-button expand-button-extras" id="<%= clients[i]._id %>" onclick="expander('<%= clients[i]._id %>')"><i class="fa-solid fa-caret-down" id="iTag" value="<%= clients[i]._id %>"></i></button></td>
+            </tr>
+            <tr class="extra-information extra-information-style" id="<%= clients[i]._id %>">
+                <td colspan="8" class="extra-info-cell">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6 delete-entry-button-form">
+                                <table>
+                                    <tr>
+                                        <td class="extra-information-cell text-align-right">Service Type :</td>
+                                        <td class="extra-information-cell text-align-left"><%= clients[i].serviceType %></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="extra-information-cell text-align-right">Custom Message :</td>
+                                        <td class="extra-information-cell text-align-left"><%= clients[i].customMessage %></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="extra-information-cell text-align-right">Completed Status :</td>
+                                        <td class="extra-information-cell text-align-left"><%= clients[i].completedStatus %></td>
+                                    </tr>
+                                        <% if (clients[i].completedStatus === "no"){ %>
+                                            <td class="extra-information-cell text-align-right">Completed?</td>
+                                            <td class="extra-information-cell text-align-left">
+                                                <form action="/completedStatus" method="post">
+                                                    <input type="hidden" name="completedStatusID" value="<%= clients[i]._id %>">
+                                                    <input type="checkbox" name="completedYes" id="" onchange="this.form.submit()" class="completed-checkbox">
+                                                </form>
+                                            </td>
+                                        <% } %> -->
+                                        
+                                        <!-- <td class="extra-information-cell">Completed?</td> -->
+                                </table>
+                                
+                            </div>
+                            <div class="col-lg-6">
+                                <form action="/generateInvoice" method="post">
+                                    <label for="" class="invoice-label">Enter the number of Fields in the invoice <em>(no more than 7)</em></label>
+                                    <input type="hidden" name="clientIDForInvoice" value="<%= clients[i]._id %>">
+                                    <input type="number" name="noOfFields" id="" class="invoice-input" autofocus>
+                                    <button type="submit" class="delete-db-button invoice-button-extras">Generate Invoice</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <h3><%= clients[i].serviceType %></h3>
+                    <h3><%= clients[i].customMessage %></h3>
+                    <h3>Completed Status : <%= clients[i].completedStatus %></h3>
+                    <% if (clients[i].completedStatus === "no"){ %>
+                    <form action="/completedStatus" method="post">
+                        <label for="">completed?</label>
+                        <input type="hidden" name="completedStatusID" value="<%= clients[i]._id %>">
+                        <input type="checkbox" name="completedYes" id="" onchange="this.form.submit()">
+                    </form>
+                    <% } %> -->
+                    <!-- <form action="/generateInvoice" method="post">
+                        <label for="">Enter the number of Fields in the invoice <em>(no more than 7)</em></label>
+                        <input type="hidden" name="clientIDForInvoice" value="<%= clients[i]._id %>">
+                        <input type="number" name="noOfFields" id="">
+                        <input type="submit" value="Generate Invoice">
+                    </form> -->
+                </td>
+            </tr>
+
+        <% } %>
+    </table>
+</div>
+
+<!-- <script src="scripts/readingObjectID.js"></script> -->
+<script src="scripts/adminConsole.js"></script>
+
+<%- include("footer") %>

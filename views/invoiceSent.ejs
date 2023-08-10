@@ -1,0 +1,16 @@
+<%- include('header') %>
+<h1>Invoice Confirmation</h1>
+</div>
+<table>
+    <tr>
+        <td><i class="<%= statusOfClient %>"></i></td>
+        <td>Invoice email sent to Client</td>
+    </tr>
+    <tr>
+        <td><i class="<%= statusOfAdmin %>"></i></td>
+        <td>Invoice email sent to you</td>
+    </tr>
+</table>
+<p><%= extraMessage %></p>
+<button class="submitButton" id="getInTouchButton-index" type="button" onclick="window.location.href='astrosutopia'">Return</button>
+<%- include("footer") %>

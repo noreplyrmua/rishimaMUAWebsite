@@ -1,0 +1,35 @@
+<%- include("header") %>
+    <h1>Generate Invoice</h1>
+</div>
+<div class="form-container" id="quoteFormDiv">
+    <form action="/invoiceData" method="post">
+        <div class="form-group">
+            <table>
+                <tr>
+                    <td>Date of Booking</td>
+                    <td>Description</td>
+                    <td>Quantity</td>
+                    <td>Price</td>
+                </tr>
+                <% for (i = 0; i < noOfFields ; i++){ %>
+                    <tr>
+                        <td><input type="date" name="dateOfBooking" id=""></td>
+                        <td><input type="text" name="description" id=""></td>
+                        <td><input type="number" name="quantity" id=""></td>
+                        <td><input type="number" name="price" id=""></td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+        <div class="form-group">
+            <label for="">Discount <em>Do not enter % sign</em></label>
+            <input type="number" name="discount" id="">
+        </div>
+        <div class="form-group">
+            <label for="">Advance</label>
+            <input type="number" name="advance" id="">
+        </div>
+        <input type="submit" value="Generate Invoice">
+    </form>
+</div>
+<%- include("footer") %>

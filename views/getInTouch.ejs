@@ -1,0 +1,199 @@
+<%- include("header") %>
+        <h1 id="Certification">Get In Touch</h1>
+    </div>
+
+    <div id="formContent">
+        <h2 id="heyThereBeautiful">Hey there, Beautiful!</h2>
+        <p>Please fill out the form below to get in contact with us. Upon the successful submission of the form, one of our team members will be in touch to further discuss the details of your event. 
+            Please be advised that the prices will be discussed by our team once we have a better understanding of your booking.</p>
+        <p class="warning-message"><%= warningMessage %></p>
+    </div>
+
+    <div id="quoteFormDiv">
+        <form method="POST" id="quoteFormActual" action="/getInTouch">
+
+            <div class="formfield" id="namefield">
+                <label for="name">Full Name</label>
+                <input type="text" id="Name" name="name" required>
+            </div>
+            
+            <div class="formfield" id="emailfield">
+                <label for="email">Email</label>
+                <input type="text" id="Email" name="email" required>
+            </div>
+            
+            <div class="formfield" id="pnumberfield">
+                <label for="pnumber">WhatsApp Number</label>
+                <input type="text" id="Pnumber" name="pnumber" required>
+            </div>
+            
+            <div class="formfield" id="instafield">
+                <label for="instaID">Instagram ID</label>
+                <input type="text" id="InstaID" name="instaID">
+            </div>
+
+            <div class="formfield" id="bookDateField">
+                <label for="bookDate">Booking Date</label>
+                <input type="date" id="BookDate" name="bookDate">
+            </div>
+
+            <div class="formfield" id="locationTypeField">
+                <h5>Location Type</h5>
+                <table>
+                    <tr class="quoteFormTableRow">
+                        <td>
+                            <input type="checkbox" id="outofstation" name="outofstation">
+                        </td>
+                        <td>
+                            <label for="outofstation">Out Of Station</label>
+                        </td>
+                    </tr>
+                    <tr class="quoteFormTableRow">
+                        <td>
+                            <input type="checkbox" id="studio" name="studio">
+                        </td>
+                        <td>
+                            <label for="studio">Studio</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="formfield" id="serviceField">
+                <h5>Services</h5>
+
+                <table>
+                    <tr class="quoteFormTableRow">
+                        <td>
+                            <input type="checkbox" id="bridal" name="bridal">
+                        </td>
+                        <td>
+                            <label for="bridal">Bridal</label>
+                        </td>
+                    </tr>
+
+                    <tr class="quoteFormTableRow">
+                        <td>
+                            <input type="checkbox" id="preWeddingFunctions" name="preWeddingFunctions">
+                        </td>
+                        <td>
+                            <label for="preWeddingFunctions">Pre Wedding Function</label>
+                        </td>
+                    </tr>
+
+                    <tr class="quoteFormTableRow">
+                        <td>
+                            <input type="checkbox" id="partyMakeUp" name="partyMakeUp">
+                        </td>
+                        <td>
+                            <label for="partyMakeUp">Party Makeup</label>
+                        </td>
+                    </tr>
+
+                    <tr class="quoteFormTableRow">
+                        <td>
+                            <input type="checkbox" id="editorial" name="editorial">
+                        </td>
+                        <td>
+                            <label for="editorial">Editorial</label>
+                        </td>
+                    </tr>
+
+                    <tr class="quoteFormTableRow">
+                        <td>
+                            <input type="checkbox" id="specialEffects" name="specialEffects">
+                        </td>
+                        <td>
+                            <label for="specialEffects">Special Effects</label>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="formfield" id="messageField">
+                <label for="message">Any Message</label>
+                <input type="text" id="message" name="message">
+            </div>
+            <div class="formfield" id="submitField">
+                <input type="submit" value="Submit" name="submit" class="submitButton">
+            </div>
+            
+        </form>
+    
+    </div>
+
+    
+    <!-- RESPONSIVE NEW BOTTOMBAR -->
+    <div class="container-fluid bottomBar">
+        <div class="row align-items-center">
+
+            <!-- contact information -->
+            <div class="col-lg-4">
+                <table class="contactTable mx-auto">
+                    <tr>
+                        <td><i class="fa-solid fa-phone contact-icon"></i></td>
+                        <td class="contactTextAlign"><a class="contactText" href="">+91 9780017475</a></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa-solid fa-envelope contact-icon"></i></td>
+                        <td class="contactTextAlign"><a class="contactText" href="mailto:rishimamakeupartist@gmail.com">rishimamakeupartist@gmail.com</a></td>
+                    </tr>
+
+                    <tr>
+                        <td><i class="fa-brands fa-instagram contact-icon"></i></td>
+                        <td class="contactTextAlign"><a class="contactText" href="https://instagram.com/rishimamakeupartist?igshid=YWJhMjlhZTc=">@rishimamakeupartist</a></td>
+                    </tr>
+                </table>
+                
+            </div>
+
+            <!-- bottom bar logo -->
+            <div class="col-lg-4">
+                <img src="images/RA_logo_final_crop.png" alt="Rishima Makeup Artist" id="logoBottomBar">
+
+            </div>
+
+            <!-- location information -->
+            <div class="col-lg-4">
+
+                <table class="contactTable mx-auto">
+                    <tr>
+                        <td>
+                            <i class="fa-solid fa-location-dot contact-icon"></i>
+                        </td>
+                        <td>
+                            <p class="locationText">Hoshiarpur, Punjab</p>
+                            <p class="locationText">India</p>
+                            <p class="locationText">146001</p>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+        <div class="row align-items-center made-w-love">
+            <div class="col-lg-4 mx-auto">
+                <p class="end-text">Made with <i class="fa-solid fa-heart end-text"></i> by Bobba</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxe4xdytWNyjED_OKeoWgzPXi21hfFy5S8bAiMafoTvniraFPxAKcwK_YyhWKHBhY-O/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Your response has been recorded! Thank you for contacting us"))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,684 @@
+body{
+    background-color: #f3ede4;
+    text-align: center;
+    margin: 0;
+}
+h1{
+    color: #252525;
+    padding-top: 6rem;
+    font-family: 'Birthstone', cursive;
+    font-weight: 400;
+    font-size: 8rem;
+}
+h2{
+    color: #bcb4b3;
+    font-family: 'Birthstone', cursive;
+    font-size: 3.4rem;
+    font-weight: 200;
+    text-align: left;
+}
+h3{
+    color: #AD8B73;
+    font-family: 'Questrial', sans-serif;
+    font-size: 2rem;
+    margin: 0;
+}
+h5{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: left;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+p{
+    margin: 0;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.2rem;
+    color: #252525;
+    text-align: left;
+}
+
+input{
+    display: block;
+    width: 100%;
+    margin-top: 0.2rem;
+    margin-right: 2rem;
+    background-color: transparent;
+    border-width: 0.1rem;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0.3rem;
+    font-size: 1.4rem;
+    font-family: 'Questrial', sans-serif;
+}
+
+label{
+    display: block;
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: 'Questrial', sans-serif;
+}
+
+li{
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.2rem;
+}
+
+/*class selectors*/
+.Rishima{
+    position: relative;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding-top: 10rem;
+    font-size: 5rem;
+}
+
+.MUA{
+    margin-top: 0%;
+    font-size: 3rem;
+    font-weight: 100;
+    font-family: 'Pacifico', cursive;
+}
+
+.topBarButton{
+    color: #252525;
+    position: relative;
+    top: 42px;
+    padding-right: 40px;
+    font-size: larger;
+    font-family: 'Questrial', sans-serif;
+    transition-duration: 300ms;
+    text-decoration: none;
+}
+.topBarButton:hover{
+    color: #AD8B73;
+}
+
+.bottomBar{
+    height: auto;
+    background-color: #bcb4b3;
+    padding: 2% 3%;
+}
+
+.locationText{
+    text-align: left;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+    font-family: 'Questrial', sans-serif;
+}
+
+.contactIcon{
+    height: 1.7rem;
+    width: auto;
+}
+
+.contactText{
+	text-decoration: none;
+	color: black;
+    padding-left: 1rem;
+    text-align: left;
+    margin: 0%;
+    font-size: 1.2rem;
+    font-family: 'Questrial', sans-serif;
+    transition-duration: 300ms;
+}
+
+.contactText:hover{
+    color: #FFFBE9;
+}
+
+.contactTextAlign{
+    text-align: left;
+}
+
+.division1{
+    margin-top: 0%;
+    
+    background-image: url('https://drive.google.com/uc?export=view&id=1jkn6u6zEPUtE19W9WwVO6ezQEisR-D66')
+}
+
+.certificateX{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.certificateImage{
+    height: 32rem;
+    width: auto;
+    padding-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.certHeading{
+    margin-bottom: 0.5rem;
+}
+
+.certHR{
+    margin-top: 5rem;
+}
+
+.formfield{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.quoteFormTableRow{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.submitButton {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: 'Questrial', sans-serif;
+    color: #ffffff;
+    font-size: 2rem;
+    background: #252525;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    transition-duration: 300ms;
+    margin-top: 3rem;
+  }
+  
+  .submitButton:hover {
+    background: #f3ede4;
+    text-decoration: none;
+    color: #252525;
+  }
+
+  .filter-db-button{
+    font-size : 1rem;
+    margin : 20px;
+  }
+
+  .delete-db-button{
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 15px;
+    font-size: medium;
+    margin : 0;
+    color: #ffffff;
+    background: #252525;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    transition-duration: 300ms;
+
+  }
+
+  .invoice-label{
+    margin-top: 10px;
+    color : #f3ede4;
+  }
+
+  .invoice-input{
+    color: #f3ede4;
+  }
+
+  .invoice-button-extras{
+    background: #f3ede4;
+    /* text-decoration: none; */
+    color: #252525;
+    font-family: 'Questrial', 'sans-serif';
+    margin-top : 10px;
+  }
+
+  .completed-checkbox{
+    width : 10%
+  }
+
+  /* .delete-db-button:hover{
+
+  } */
+
+  .delete-entry-button-form{
+    display: flex;
+    justify-content: center;
+  }
+
+  .expand-button-extras{
+    font-weight: 200;
+  }
+
+  .text-align-right{
+    text-align: right;
+  }
+
+  .text-align-left{
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  .db-table-row{
+    transition-duration: 300ms;
+  }
+
+  .db-table-row:hover{
+    background-color: #252525;
+  }
+
+  .table-heading{
+    border-width:0;
+    border-bottom-width: 4px;
+    border-bottom-color: #8f8f8f;
+    font-family : 'Questrial', sans-serif;
+    font-size : 1.5rem;
+    font-weight: 500s;
+  }
+
+  .table-cell-data{
+    font-family: 'Questrial', sans-serif;
+  }
+
+  .db-table-row:hover .table-cell-data{
+    color: #f3ede4;
+  }
+  .db-table-row:hover .delete-db-button{
+    background: #f3ede4;
+    /* text-decoration: none; */
+    color: #252525;
+  }
+
+  .change-bg-color-row{
+    color : #f3ede4;
+    background-color: #252525;
+  }
+
+  .extra-information-style{
+    background-color: #252525;
+    border-radius: 15px;
+  }
+
+  .extra-info-cell{
+    padding: 20px;
+    display: none;
+  }
+  .extra-information-cell{
+    color: #f3ede4;
+  }
+  .landingPageHeading{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  .landingPageHR{
+    margin-top: 1rem;
+  }
+
+  .contentDiv{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    /* This class simply uses content of index.html/aboutUSsection */
+  }
+
+  .aboutRishimaContent{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .aboutRishimaPara{
+    margin-bottom: 2rem;
+  }
+
+  /* .earlyYearsImageDiv{
+
+  } */
+
+  .earlyYearsImage{
+    display: inline-block;
+    height: 15rem;
+    width:  15rem;
+    margin-left: 1rem;
+    margin-right:1rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .aboutRishimaSectionX{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    transition-duration: 0.2s;
+  }
+
+  .aboutRishimaSectionX:hover{
+    background-color: #252525;
+    
+  }
+
+  .aboutRishimaSectionX:hover p{
+    color: whitesmoke
+  }
+
+  .carousel-item{
+    padding-top: 7%;
+    padding-bottom: 7%;
+  }
+
+  .carousel-image{
+    width: 60%;
+    height: auto;
+    border-radius: 1rem;
+  }
+
+  .section-gallery{
+    margin: 5% 5%;
+    border-radius: 1rem;
+}
+
+  .gallery-heading{
+    padding-top: 20px;
+    font-size: 4rem;
+    line-height: 0.99;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+
+  .reduce-heading-size{
+    font-size : 3rem;
+  }
+
+  .gallery-heading-even{
+    color: #252525;
+  }
+
+  .even-section-gallery{
+    background-color: #CBC3BD;
+  }
+
+  .odd-section-gallery{
+    background-color: #252525;
+  }
+
+  .gallery-para{
+    text-align: center;
+    padding-bottom: 20px;
+    color: #8f8f8f;
+  }
+
+  .warning-message{
+    font-size: medium;
+    color: red;
+  }
+
+  .gallery-para-odd{
+    color: #ECE1D6;
+  }
+
+  /* Redone Bottom Bar */
+
+  .contact-icon{
+    font-size: 2rem;
+  }
+
+  .contactTable{
+    margin: 3% 0%;
+  }
+
+  .made-w-love{
+    margin-top: 2%;
+    margin-bottom: 1%;
+  }
+  .end-text{
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .navbar-text-custom{
+    color: #252525;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .navbar-text-custom:hover{
+    color: #8f8f8f;
+  }
+
+  .toggler-button{
+    color: #252525;
+  }
+
+  .extra-information{
+    display: none;
+    /* background-color: #252525; */
+  }
+
+  .table-centering-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom : 20px
+  }
+
+  .table-cell{
+    padding: 10px;
+    text-align: center;
+  }
+
+
+
+/*id selectors*/
+#navigation-bar-custom{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #f3ede4;
+}
+
+#topbar{
+    
+    margin-top: 0%;
+    height: 100px;
+    transition-duration: 300ms;
+    
+}
+
+#topbar:hover{
+    
+    margin-top: 0%;
+    height: 100px;
+    background-color: #f3ede4;
+}
+
+
+
+#landingpage{
+    height: 760px;
+    width: auto;
+}
+
+#RALogo{
+    
+    margin-top: 9%;
+    margin-bottom: 2%;
+    width: 300px;
+    height: auto;
+}
+
+#locationPin{
+    height: 5.5rem;
+    width: auto;
+}
+
+#location{
+    position: absolute;
+    right: 6rem;
+    padding-top: 3.5rem;
+}
+
+#logoBottomBar{
+    padding-top: 1rem;
+    height: 10.8rem;
+    width: auto;
+}
+
+#contact{
+    position: absolute;
+    padding-top: 2.8rem;
+    left: 3rem;
+    margin: 0%;
+    
+}
+
+#certificationContent{
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+    margin-right: 10rem;
+    margin-left: 10rem;
+}
+
+#certificate1{
+    text-align: left;
+    padding:2rem;
+    margin-bottom: 7rem;
+}
+
+#certificate2{
+    text-align: right;
+    padding: 2rem;
+}
+
+#certHeading1{
+    position: absolute;
+    left: 30rem;
+}
+
+#certificateImage1{
+    float: left;
+    margin-right: 4rem;
+}
+
+#certificateImage2{
+    float: right;
+    margin-left: 4rem;
+}
+
+#quoteFormDiv{
+    display: grid;
+    place-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;    
+
+}
+
+#quoteFormActual{
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 3rem;
+    border-radius: 2rem;
+    background-color: #f3ede4;
+    transition-duration: 300ms;
+}
+
+#quoteFormActual:hover{
+    background-color: #bcb4b3;
+}
+
+#formContent{
+    margin-top: 3rem;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#heyThereBeautiful{
+    margin-bottom: 1rem;
+}
+
+#aboutUSsection{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#index-carousel{
+    /* width: 70%; */
+    /* margin-left: 15%;
+    margin-right: 15%; */
+    /* margin-top: 2rem; */
+    margin-bottom: 2rem;
+    background-color: #252525;
+}
+
+
+#aboutUSpara1{
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+#ourVisionSection{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#certificationSection{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#landingPage{
+    margin-bottom: 3rem;
+}
+
+#aussieAcademy{
+    font-weight: 100;
+}
+
+#AOHM{
+    margin-top: 0rem;
+    width: 40%;
+}
+
+#bridalList{
+    margin-left: 5rem;
+}
+
+#pwfList{
+    /* position: relative;
+    margin-left: 30rem; */
+    text-align: left;
+    width: 10rem;
+}
+
+#partyMakeupList{
+    text-align: left;
+}
+
+#partyMakeupHeading{
+    text-align: left;
+}
+
+#specialEffectsHeading{
+    text-align: left;
+}
+
+#getInTouchButton{
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+
+#getInTouchButton-index{
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+#aboutRishimaHeader{
+    margin-top: 6rem;
+}
+
+
+
+
+

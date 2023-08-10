@@ -1,0 +1,21 @@
+<%- include("header") %>
+<h1>Admin Login</h1>
+</div>
+<!-- <p class="warning-message"><%= warningMessage %></p> -->
+<div class="form-container" id="quoteFormDiv">
+    <form action="/astrosutopia" method="POST">
+        <div class="form-group">
+            <label for="" class="warning-message"><%= warningMessage %></label>
+        </div>
+        <div class="form-group">
+            <label for="adminPassword">Enter your Admin password</label>
+            <input type="password" name="adminPassword" id="adminPassword">
+        </div>
+        <div>
+            <input type="submit" value="SUBMIT" class="submitButton">
+        </div>
+    </form>
+</div>
+
+<!-- butto<n class="submitButton" id="getInTouchButton-index" type="button" onclick="window.location.href='adminRegister'">REGISTER</button> -->
+<%- include("footer") %>
